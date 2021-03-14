@@ -1,4 +1,4 @@
-# myonttecdemo
+# myontecdemo
 
 Simple calculator for calculating burned calories for running
 
