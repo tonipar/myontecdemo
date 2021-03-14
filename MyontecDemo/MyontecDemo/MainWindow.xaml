@@ -1,0 +1,47 @@
+﻿<Window x:Class="MyontecDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyontecDemo"
+        mc:Ignorable="d"
+        Title="Myontec Demo" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="30" Text="Calories calculator for running" Grid.ColumnSpan="3" Margin="0,10" />
+        
+        <TextBlock Grid.Column="1" Grid.Row="2" FontSize="25" Text="Duration (h)"/>
+        <TextBox x:Name="formTime" Grid.Column="2" Grid.Row="2" Width="200" Margin="10,0" />
+        <TextBlock x:Name="errormessageTime" Grid.Column="3" Grid.Row="2" Foreground="Red"/>
+        
+        <TextBlock Grid.Column="1" Grid.Row="3" FontSize="25" Text="Distance (km)"/>
+        <TextBox x:Name="formDistance" Grid.Column="2" Grid.Row="3" Width="200" Margin="10,0" />
+        <TextBlock x:Name="errormessageDistance" Grid.Column="3" Grid.Row="3" Foreground="Red"/>
+        
+        <TextBlock Grid.Column="1" Grid.Row="4" FontSize="25" Text="Weight"/>
+        <TextBox x:Name="formWeight" Grid.Column="2" Grid.Row="4" Width="200" Margin="10,0" />
+        <TextBlock x:Name="errormessageWeight" Grid.Column="3" Grid.Row="4" Foreground="Red"/>
+        
+        <Button x:Name="submitButton" Content="Calculate" Grid.Column="1" Grid.Row="5" Click="From_submitButton_Click"/>
+
+        <TextBlock x:Name="resulttext" Grid.Column="1" Grid.Row="6"  Grid.ColumnSpan="3" FontSize="30"/>
+    </Grid>
+</Window>
